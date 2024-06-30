@@ -10,11 +10,14 @@
 
 <body>
   <h1>Welcome to my fetcher</h1>
-  <button onclick="fetchData()">click</button>
+  <!-- <button onclick="fetchData()">click</button> -->
   <script>
     console.log('spript is executing...');
     async function fetchData() {
-      const res = await fetch("http://localhost:3000/locations");
+      //----------development--------------
+      //   const res = await fetch("http://localhost:3000/locations");
+      //----------production--------------
+      const res = await fetch("https://gogly-backend.vercel.app/data");
       const data = await res.json();
       console.log(data);
     }
