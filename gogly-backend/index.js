@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-// const port = 3000;
+const port = 3000;
 
 app.use(cors());
 
@@ -47,8 +47,8 @@ app.get('/locations', (req, res) => {
 });
 
 //----------- NodeJS ------------ 
-// app.listen(port, () => {
-//     console.log(`server is running http://localhost:${port}`);
-// });
+app.listen(port, () => {
+    console.log(`server is running http://localhost:${port}`);
+});
 
 module.exports = app;
